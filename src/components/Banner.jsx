@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerStats from '../assets/illustrations/BannerStats1';
+import BannerStats from '../assets/illustrations/BannerStats1.png';
 
 const renderSwitch = ({
   title,
@@ -11,11 +11,16 @@ const renderSwitch = ({
   switch (btnType) {
     case 0:
       return (
-        <div className="bg-black text-white font-[Outfit] font-extrabold text-xs flex items-center justify-between mx-4 px-4 rounded-md h-min p-4 md:h-[550px] ">
-          <div className="w-50%">
-            <h1>E-Commerce Solutions for all your Online Business Needs</h1>
+        <div className="relative text-white w-full font-[Outfit] font-extrabold text-xs flex items-center justify-between h-min">
+          <img src={BannerStats} className="w-full px-2" />
+          <div className="absolute w-1/2 md:w-2/5 left-0 px-10">
+            <h1 className="md:text-5xl text-lg md:leading-snug leading-4">
+              E-Commerce Solutions for all your Online Business Needs.
+            </h1>
+            <h1 className="md:text-3xl bg-[#6672E2] w-min px-2 py-1 rounded-md mt-2 md:mt-4">
+              GET&nbsp;STARTED
+            </h1>
           </div>
-          <BannerStats className="" />
         </div>
       );
     default:
