@@ -6,11 +6,10 @@ import MultipleService from '../assets/illustrations/MultipleService.png';
 import QuickSupport from '../assets/illustrations/QuickSupport.png';
 import SectionTitle from '../core-components/SectionTitle';
 
-const WhyBrightUrban = ({ title, theme }) => {
-  let color = theme == 'dark' ? '#ffffff' : '#000000';
+const WhyBrightUrban = ({ title }) => {
   return (
     <div>
-      <SectionTitle title="Why BrightUrban" color={color} />
+      <SectionTitle title="Why BrightUrban" />
       <div className="md:grid md:grid-cols-2 space-y-5">
         <WhyBrightUrbanCard
           logo={BestPricing}

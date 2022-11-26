@@ -1,5 +1,5 @@
 import React from 'react';
-import BannerStats from '../assets/illustrations/BannerStats1.png';
+import BannerStats from '../assets/illustrations/Hero.png';
 
 const renderSwitch = ({
   title,
@@ -11,9 +11,9 @@ const renderSwitch = ({
   switch (btnType) {
     case 0:
       return (
-        <div className="relative text-white w-full font-[Outfit] font-extrabold text-xs flex items-center justify-between h-min">
-          <a href="">
-            <img src={BannerStats} className="w-full px-2" />
+        <div className="relative text-white w-full px-2 md:px-4">
+          <a href="" className="w-full">
+            <img src={BannerStats} className="w-full" />
           </a>
         </div>
       );
