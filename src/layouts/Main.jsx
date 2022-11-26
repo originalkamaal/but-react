@@ -2,11 +2,14 @@ import React from 'react';
 import { Outlet } from 'react-router';
 
 import Navbar from '../components/Navbar';
+import Banner from '../components/Banner';
 
 export default function Main() {
+  let theme = 'light';
   return (
     <div>
-      <Navbar theme="light" />
+      <Navbar theme={theme} />
+      <Banner theme={theme} className="w-full h-[300px]" />
 
       {/* This element will render either <DashboardMessages> when the URL is
           "/messages", <DashboardTasks> at "/tasks", or null if it is "/"
