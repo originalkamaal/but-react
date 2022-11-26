@@ -18,7 +18,69 @@ export default function Navbar({ theme }) {
     { title: 'Contact Us', src: '#' },
   ];
   return (
-    <>
+    <div className="relative z-40">
+      {/* Mobile Links */}
+      <div className="flex space-x-5">
+        <ul
+          className={`${
+            theme == 'dark' ? 'bg-black text-white' : 'text-black bg-white'
+          } ' absolute top-[70px] w-full py-3  md:hidden flex flex-col items-center justify-center  space-y-5 font-[Outfit] ${
+            menu == true ? 'left-0' : 'hidden'
+          }`}
+        >
+          <li className="flex items-center md:hidden justify-center">
+            <div className="relative text-gray-600">
+              <span className="absolute inset-y-0 right-0 flex items-center pr-2">
+                <button type="submit" className="p-1">
+                  <svg
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    className="w-6 h-6"
+                  >
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                  </svg>
+                </button>
+              </span>
+              <input
+                type="text"
+                name="q"
+                className="py-2 w-full text-sm text-white bg-gray-100 rounded-md pr-10 pl-3 focus:outline-none focus:text-gray-900"
+                maxLength={256}
+                placeholder="Search..."
+                autocomplete="off"
+              />
+            </div>
+          </li>
+          {links.map((link, i) => {
+            let even = links.legnth - 1 == i ? true : false;
+            return (
+              <li>
+                <a href={link.src}>{link.title}</a>
+              </li>
+            );
+          })}
+
+          <li>
+            <a
+              href="#"
+              className={
+                theme == 'dark'
+                  ? 'bg-white text-black px-2 py-1 rounded-lg'
+                  : 'bg-black text-white px-2 py-1 rounded-lg'
+              }
+            >
+              My Account
+            </a>
+          </li>
+          <li className="md:hidden">
+            <a href="#">Logout</a>
+          </li>
+        </ul>
+      </div>
       {/* Navbar Container */}
       <div
         className={`${
@@ -142,6 +204,7 @@ export default function Navbar({ theme }) {
             <IoMdMenu size={25} color={color} />
           )}
         </div>
+
         <div className="cursor-pointer">
           <Logo className="w-44" color={color} />
         </div>
@@ -150,68 +213,6 @@ export default function Navbar({ theme }) {
           <CiShoppingCart size={25} color={color} />
         </div>
       </div>
-      {/* Mobile Links */}
-      <div className="flex space-x-5">
-        <ul
-          className={`${
-            theme == 'dark' ? 'bg-black text-white' : 'text-black bg-white'
-          } 'z-[-1] absolute top-[70px] w-full py-6  md:hidden flex flex-col items-center justify-center  space-y-5 font-[Outfit] ${
-            menu == true ? 'left-0' : 'hidden'
-          }`}
-        >
-          <li className="flex items-center md:hidden justify-center">
-            <div className="relative text-gray-600">
-              <span className="absolute inset-y-0 right-0 flex items-center pr-2">
-                <button type="submit" className="p-1">
-                  <svg
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    viewBox="0 0 24 24"
-                    className="w-6 h-6"
-                  >
-                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                  </svg>
-                </button>
-              </span>
-              <input
-                type="text"
-                name="q"
-                className="py-2 w-80 text-sm text-white bg-gray-100 rounded-md pr-10 pl-3 focus:outline-none  focus:text-gray-900"
-                maxLength={256}
-                placeholder="Search..."
-                autocomplete="off"
-              />
-            </div>
-          </li>
-          {links.map((link, i) => {
-            let even = links.legnth - 1 == i ? true : false;
-            return (
-              <li>
-                <a href={link.src}>{link.title}</a>
-              </li>
-            );
-          })}
-
-          <li>
-            <a
-              href="#"
-              className={
-                theme == 'dark'
-                  ? 'bg-white text-black px-2 py-1 rounded-lg'
-                  : 'bg-black text-white px-2 py-1 rounded-lg'
-              }
-            >
-              My Account
-            </a>
-          </li>
-          <li className="md:hidden">
-            <a href="#">Logout</a>
-          </li>
-        </ul>
-      </div>
-    </>
+    </div>
   );
 }
