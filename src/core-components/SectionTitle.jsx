@@ -2,7 +2,7 @@ import React from 'react';
 
 const SectionTitle = ({ title, link, linkTitle }) => {
   return (
-    <div className="">
+    <>
       <div className="font-extrabold w-full flex justify-center py-3 md:py-8 md:text-4xl text-xl">
         {title}
       </div>
@@ -11,7 +11,7 @@ const SectionTitle = ({ title, link, linkTitle }) => {
           <a href={link}>{linkTitle}</a>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

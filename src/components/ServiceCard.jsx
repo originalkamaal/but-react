@@ -1,11 +1,10 @@
 import React from 'react';
 
-const ServiceCard = ({ theme }) => {
-  let color = theme == 'dark' ? '#ffffff' : '#000000';
+const ServiceCard = () => {
   return (
-    <div>
-      <SectionTitle title="Why BrightUrban" color={color} />
-    </div>
+    <>
+      <div>sdfasdf</div>
+    </>
   );
 };
 
