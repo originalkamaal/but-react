@@ -1,11 +1,13 @@
 import React from 'react';
+import HomeStats from '../components/HomeStats';
 
 import SectionTitle from '../core-components/SectionTitle';
 const OurAchievements = ({ theme }) => {
   let color = theme == 'dark' ? '#ffffff' : '#000000';
   return (
     <div>
-      <SectionTitle title="Why BrightUrban" color={color} />
+      <SectionTitle title="Our Achievements" color={color} />
+      <HomeStats />
     </div>
   );
 };

@@ -18,17 +18,21 @@ export default function Navbar({ theme }) {
     { title: 'Contact Us', src: '#' },
   ];
   return (
-    <div className="relative z-40">
+    <div
+      className={`${
+        theme == 'dark' ? 'bg-black text-white' : 'text-black bg-white'
+      } sticky top-0 z-40 `}
+    >
       {/* Mobile Links */}
       <div className="flex space-x-5">
         <ul
           className={`${
             theme == 'dark' ? 'bg-black text-white' : 'text-black bg-white'
-          } ' absolute top-[70px] w-full py-3  md:hidden flex flex-col items-center justify-center  space-y-5 font-[Outfit] ${
+          } absolute top-[70px] w-full py-3  lg:hidden flex flex-col items-center justify-center  space-y-5 font-[Outfit] ${
             menu == true ? 'left-0' : 'hidden'
           }`}
         >
-          <li className="flex items-center md:hidden justify-center">
+          <li className="flex items-center lg:hidden justify-center">
             <div className="relative text-gray-600">
               <span className="absolute inset-y-0 right-0 flex items-center pr-2">
                 <button type="submit" className="p-1">
@@ -59,7 +63,9 @@ export default function Navbar({ theme }) {
             let even = links.legnth - 1 == i ? true : false;
             return (
               <li>
-                <a href={link.src}>{link.title}</a>
+                <a className="whitespace-nowrap" href={link.src}>
+                  {link.title}
+                </a>
               </li>
             );
           })}
@@ -76,7 +82,7 @@ export default function Navbar({ theme }) {
               My Account
             </a>
           </li>
-          <li className="md:hidden">
+          <li className="lg:hidden">
             <a href="#">Logout</a>
           </li>
         </ul>
@@ -85,14 +91,14 @@ export default function Navbar({ theme }) {
       <div
         className={`${
           theme == 'dark' ? 'bg-black text-white' : ''
-        } hidden md:flex justify-between h-[70px] justify-center px-6 md:px-10 items-center w-full relative`}
+        } hidden lg:flex justify-between h-[70px] justify-center px-6 lg:px-10 items-center w-full relative`}
       >
         {/* Logo */}
         <div className="cursor-pointer">
           <Logo className="w-44" color={color} />
         </div>
         {/* Search Articles */}
-        <div className="md:flex items-center hidden justify-center">
+        <div className="lg:flex items-center hidden justify-center">
           <div className="relative text-gray-600">
             <span className="absolute inset-y-0 right-0 flex items-center pr-2">
               <button type="submit" className="p-1">
@@ -124,11 +130,11 @@ export default function Navbar({ theme }) {
           <ul
             className={`${
               theme == 'dark' ? 'bg-black text-white' : 'text-black bg-white'
-            } 'z-[-1] md:z-10 md:static absolute top-[70px] w-full md:w-auto py-6 md:py-0 flex flex-col md:flex-row items-center justify-center md:space-x-5 md:pl-0 space-y-5 md:space-y-0 font-[Outfit] ${
+            } 'z-[-1] lg:z-10 lg:static absolute top-[70px] w-full lg:w-auto py-6 lg:py-0 flex flex-col lg:flex-row items-center justify-center lg:space-x-5 lg:pl-0 space-y-5 lg:space-y-0 font-[Outfit] ${
               menu == true ? 'left-0' : 'left-[-100%]'
             }`}
           >
-            <li className="flex items-center md:hidden justify-center">
+            <li className="flex items-center lg:hidden justify-center">
               <div className="relative text-gray-600">
                 <span className="absolute inset-y-0 right-0 flex items-center pr-2">
                   <button type="submit" className="p-1">
@@ -176,7 +182,7 @@ export default function Navbar({ theme }) {
                 My Account
               </a>
             </li>
-            <li className="md:hidden">
+            <li className="lg:hidden">
               <a href="#">Logout</a>
             </li>
           </ul>
@@ -189,7 +195,7 @@ export default function Navbar({ theme }) {
       <div
         className={`${
           theme == 'dark' ? 'bg-black text-white' : ''
-        } flex justify-between h-[70px] justify-center px-6 items-center w-full md:hidden relative`}
+        } flex justify-between h-[70px] justify-center px-6 items-center w-full lg:hidden relative`}
       >
         {/* Toggle Button */}
         <div

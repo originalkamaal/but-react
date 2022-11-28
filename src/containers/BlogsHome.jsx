@@ -1,6 +1,22 @@
 import React from 'react';
-const BlogsHome = () => {
-  return <div>BlogsHome</div>;
+
+import SectionTitle from '../core-components/SectionTitle';
+import BlogsCard from '../components/BlogsCard';
+//title, desc, icon, link
+const OurServices = () => {
+  return (
+    <div>
+      <SectionTitle title="Recent Blog Posts" link="#" linkTitle="View All" />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3 px-6">
+        <BlogsCard />
+        <BlogsCard />
+        <BlogsCard />
+        <BlogsCard />
+        <BlogsCard />
+        <BlogsCard />
+      </div>
+    </div>
+  );
 };
 
-export default BlogsHome;
+export default OurServices;

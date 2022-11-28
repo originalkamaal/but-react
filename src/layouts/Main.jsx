@@ -18,9 +18,9 @@ export default function Main() {
       <Navbar />
       <Banner />
       <WhyBrightUrban />
-
       <OurServices />
       <BlogsHome />
+
       <OurAchievements />
       <Testimonials />
       <TrustedBy />
