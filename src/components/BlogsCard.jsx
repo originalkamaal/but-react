@@ -7,12 +7,12 @@ const BlogsCard = ({ data }) => {
     <div className="relative m-1 lg:m-2 pb-[40px] rounded-md flex-col justify-between">
       <div>
         <img
-          className="rounded-t-md h-3/5 w-full"
+          className="rounded-md shadow-lg w-full"
           src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
           alt=""
         />
       </div>
-      <div className="bg-emerald-100 w-min block px-2 py-1 mt-2 rounded-md text-xs text-gray-500">
+      <div className="bg-emerald-100 w-min block px-2 py-1 mt-4 rounded-md text-xs text-gray-500">
         Title
       </div>
       <div className="pt-2 font-bold text-xl lg:text-2xl">
@@ -20,7 +20,7 @@ const BlogsCard = ({ data }) => {
       </div>
       <div className="flex text-xs space-x-2 text-gray-500 items-center w-full">
         <div className="flex items-center space-x-1">
-          <div className="w-5">
+          <div className="w-4">
             <img
               className="rounded-full"
               src="https://pbs.twimg.com/profile_images/1267713887165485061/WUR4QXtd_400x400.jpg"

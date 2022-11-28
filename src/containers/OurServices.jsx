@@ -65,7 +65,7 @@ const OurServices = () => {
   return (
     <div>
       <SectionTitle title="Our Services" link="#" linkTitle="View All" />
-      <div className="grid grid-cols-2 md:grid-cols-4 px-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 px-3">
         {services.map((el, i) => {
           return <ServiceCard key={i} data={el} />;
         })}
